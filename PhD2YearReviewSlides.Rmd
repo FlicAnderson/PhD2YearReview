@@ -1,0 +1,315 @@
+---
+title: "*Coding Smart in Academia* PhD Project"
+author: "Flic Anderson"
+date: "21/11/2022"
+output: 
+  ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+      $('slide:not(.title-slide, .backdrop, .segue)').append('<footer label=\"CodingSmartInAcademia"></footer>');    
+    })
+</script>
+
+<style>
+  footer:after {
+    content: attr(label);
+    font-size: 12pt;
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    line-height: 1.9;
+  }
+</style>
+
+<style type="text/css">
+slides > slide:not(.nobackground):after {
+  content: '';
+}
+</style>
+
+<div class="notes">
+
+Bio: 
+Currently a PhD Researcher at EPCC, School of Informatics, at the University of Edinburgh. 
+Flic Anderson has been a Research Assistant in Bioinformatics in the Wallace Lab (within the Institute for Cell Biology) at the University of Edinburgh. 
+Flic was part of the development team for the 'riboviz' open source software package for processing and analysis of ribosome profiling data, working with colleagues from EPCC (University of Edinburgh) to make the codebase more robust & sustainable.   
+With a background in Ecology and Botany (previously a Research Assistant at the Royal Botanic Garden Edinburgh), Flic has worked with a wide range of types of biological data using different software tools and programming languages (particularly R) for the last 8 years, and found herself drawn towards bioinformatics and research software engineering. 
+Flic is a member of the Edinburgh Carpentries and a certified Carpentries instructor in foundational coding and data science skills for researchers. 
+
+Title: Coding Smart in Academia: Evidence-Based Software Engineering Approaches for High-Quality Research Software Projects
+
+Abstract:  
+This project will investigate which effective software engineering approaches (software engineering techniques and development practices) prevalent in traditional software engineering can be recommended to small research software projects to improve their software quality and development efficiency using empirical evidence from mixed methods approaches and novel software quality measurement frameworks
+</div>
+
+
+## HOW TO (RE-)USE THIS MATERIAL
+
+This is a `.html` presentation created in `R Markdown` with `ioslides`. 
+
+(It's been written in a [.Rmd](http://rmarkdown.rstudio.com) file, and I generated .html slides by 'knitting' it in Rstudio.)
+
+You can check out the code used to make these slides at the [Talk repo](https://github.com/FlicAnderson/PhD10moReview) on Github, and adapt it for your own presentations if you like - there's a MIT Licence on the repo, which means: 
+
+*"Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source."*
+
+Source: [tl;drLegal](https://tldrlegal.com/license/mit-license)
+
+
+
+# Coding Smart in Academia: *Evidence-Based Software Engineering Approaches for High-Quality Research Software Projects*  
+
+
+
+## Outline 
+
+__Project Background:__  
+- motivation   
+- main question, areas of focus   
+- aims & goals    
+- project development   
+- main research questions   
+ 
+__Progress:__   
+- what I've achieved so far   
+- project plan summary  
+- next 6 months priorities   
+- challenges for me and the project   
+- my questions
+
+__RS: Research software__    
+__SE: Software engineering__ 
+
+
+
+# Project Background 
+
+
+
+## Project Motivation   
+
+__Research Software: *"any code written or software used in the process of generating results for a publication"*__  
+
+* Software underpins (~) all modern research!   
+* Inaccuracies or inefficiencies in RS can have __negative research impacts__ (calibration blind-spot)  
+* __RS often created by developers un-trained in SE__: majority informally- or self-taught; existing training is sporadic, not evidence-based  
+* Due to __diversity of RS projects__, identifying effective, appropriate SE approaches can be challenging    
+* __*RS research lacks empirical evidence base identifying and supporting proven best practices*__
+
+
+
+## Project Question
+
+<font size=6>*"Which __effective SE approaches__\* prevalent in traditional SE can be recommended to __small research software projects within the UK__ to improve their __software quality__ and __development efficiency__?"* </font>
+
+
+*Areas of focus:* 
+
+* Software Engineering Approaches in Research Software [SEA]    
+* Measuring Research Software [RSM]   
+* Research Software Projects [RSP]   
+
+<font size=4>\* Specific __SE techniques__ and more general __SE development practices__. </font>  
+
+
+
+## Project Aims
+
+__Aims:__  
+
+* To develop RS __assessment metrics__.  
+* To use these in *small-scale UK-based RS projects* to __empirically test__ whether specific SE recommendations are effective and improve RS development. 
+
+__Goals:__   
+
+* Develop __evidence-basis__ to guide future researcher-developers in using effective SE approaches in their RS projects. 
+* Feed __SE recommendations back to RS community__ through publications and presentations.
+
+
+
+
+## Project Development So Far    
+
+Original Research Proposal:  
+
+* Focused on __SE in industry__ (later considered use of SE approaches in start-ups).      
+* Would __use interview/surveys__ of RS projects to investigate SE approaches being used in RS.  
+* __Less clarity__ on definition of 'effectiveness' of SE techniques.  
+* Planned to include research on whether __methods for knowledge transfer__ affected uptake of or effectiveness of specific SE techniques in RS projects.    
+* Emphasised using __taxonomy to compare RS projects__.    
+* Aimed to generate __comprehensive catalogue of programming techniques__ used in RS projects.    
+
+
+
+# Progress  
+
+
+## What I've Achieved so Far (Project)   
+
+* __Refining research area__  and extending research proposal    
+* __Skills development__ (IAD courses)  
+* __Project planning__ and __identifying key experiments__    
+* __Planning and designing experiment:__  *Research Software Testing Experiences Survey*    
+* Made a start on __ethics process__ for survey experiment and thinking about data management   
+* __Networking__: Meeting researchers, RS community members and software developers / technical leads from industry...    
+* __Literature Review__ - broad background reading on RS research, comparisons to SE research, some methods studies, initial focus on measuring software quality     
+
+
+
+## What I've Achieved so Far: Lit Review   
+
+__Research Software Research...__ 
+
+ * ... is a __young field__ - there is much more SE research than RS research.  
+ * ... is __still exploratory__: establishing "what are RS practices?" and "who develops RS?", rather than "how can we improve RS?".   
+ * ... __rarely mentions Arts & Humanities__ research projects and largely comprises work in scientific fields.  
+ * ... __contains multitudes__ - RS measurement metrics need to account for differing goals and resources of RS projects compared with SE projects; research can include (large) Open Source Software studies, making comparison of findings regarding efficacy of SE approaches difficult.  
+
+
+
+## What I've Achieved so Far: Lit Review    
+
+* __Little replication within RS research__ thus far.    
+* __N.U. Eisty \& J.C. Carver__ (Alabama) seem to have closest overlapping research interests. This project could *replicate/expand some of their methods with UK focus*, cf. US (+/- international) focus.  
+* RS research is __rarely backed by empirical data__ and __sampling is often not robust__ - *"generalizability crisis"* (Baltes & Ralph, 2021).  
+* Many studies __use only one method__; in many cases the __method doesn't match the aims__ of the research (e.g. many studies aim to benefit developers, but only use data-driven methods which don't link back to the aims - Storey *et al.*, 2020). __Selecting appropriate mixed methods will address this.__      
+
+
+
+## What (Else) I've Achieved so Far 
+
+* __Volunteered at [Sixth Annual Conference for Research Software Engineering](https://rsecon2022.society-rse.org/)__ (RSECon22)   
+* __Attended [SSI Collaborations Workshop 2022](https://www.software.ac.uk/cw22)__ (CW22)  
+* __Applied for [SSI Fellowship Programme 2023](https://www.software.ac.uk/programmes-and-events/fellowship-programme)__ to plan / organise activities relating to improving research software (shortlist confirmed ~Tuesday!) 
+* __Lead-authored__ / coordinated SSI blog post\* resulting from speed-blog group session at CW22  
+
+<font size=4>\* = [Aim for understandability if you want to write good research software](https://www.software.ac.uk/blog/2022-07-04-aim-understandability-if-you-want-write-good-research-software). </font>
+
+
+
+## What (Else) I've Achieved so Far  
+
+* __Presentation__ on *Open Science in Student Research Projects* at [Edinburgh Open Research Conference 2022](https://edopenresearch.com/edinburghopenresearchconference/)   
+* __Demonstrating__ on *Programming Skills* & *Fundamentals of Data Management* EPCC masters courses   
+* __Helper \& Demonstrator__ on [Ed-DaSH](https://edcarp.github.io/Ed-DaSH/) project workshops (Carpentries-style workshops: Data Science for Health and Biosciences)   
+* __Volunteered__ at tech industry/ startups conference [Turing Fest 2022](https://www.turingfest.com/conference)
+* Part of *winning team* at SSI CollabW22 hack-day :)   
+
+
+
+## Main Research Questions
+
+- "__How can effectiveness / appropriateness of SE techniques and development practices be measured__ in small UK-based RS projects?" *[RSM0]* 
+
+- "__Do identified SE techniques or development practices improve the quality and/or development efficiency of RS__ if deployed within small UK-based RS projects?" *[SEA0]*
+
+- "__Which project factors influence the adoption and effective use__ of these recommended SE approaches in small UK-based RS projects?" *[RSP0]*
+
+
+
+
+## Project Plan Summary {.flexbox .vcenter}
+
+```{r, out.width = "830"}
+knitr::include_graphics("images/ProjectPlanSummary_short.png")
+``` 
+
+
+<!-- 
+## Key Experiments / Studies
+
+__Studies / Experiments:__   
+
+ - *RS Testing Experiences* survey: __Dec 22 - Jan 23__  [SEA0, RSP0]   
+ - *Measuring RS Projects* - develop metrics/framework, then evaluate and refine: __Feb 23 - Apr 23__  [RSM0] 
+ - *Evidence-Based RS Interventions* - main experiment, mixed methods: __Jan 23 - May 24__ [SEA0, RSP0, RSM0]      
+ 
+__Literature Reviews:__    
+
+ - RS measurement: __Apr 22 - Jun 22__; __Nov 22 - Jan 23__ [RSM0]  
+ - SE techniques in RS: __Nov 22 - Feb 22__  [SEA0]  
+ - RS development practices: __Jan 23 - Apr 22__ [SEA0]   
+ - RS project factors: __Feb 23 - Mar 23__; __Jun 23 - Jul 23__ [RSP0]   
+
+-->
+
+
+## Next 6 Months Priorities: 
+
+* Complete __ethics__ procedures, create Data Management Plan  
+* *Lit Reviews:* __SE Approaches__ (techniques + development practices)  
+* Run, analyse and write up RS __Testing Experiences__ Survey    
+* *Lit Review:* __RS Measurement__  
+* Develop (+ __test__ and refine) __RS assessment metrics__ and methods    
+* Develop and refine __'SE recommendations'__ interventions       
+* __Recruiting__ RS projects for Interventions study     
+* __Begin Evidence-Based RS Interventions__ study   
+
+
+
+
+## Challenges for Me \& The Project
+
+__Collating a list of specific promising SE approaches to recommend in the Interventions study.__   
+
+They need to:     
+ - be quickly/easily learned with skill-up materials available    
+ - have supporting claims for their effectiveness  
+ - be likely to transfer well to RS projects  
+ - address software quality or development efficiency  
+ - have differing actions/methods of improvement  
+ - result in measurable changes in (6-9mo) intervention period    
+
+
+*Mitigations:* 
+__Collate list__ from lit reviews, survey study feedback, external datasets;  
+__Gather feedback__ on RS expectations/experiences re: likely effectiveness. 
+
+
+
+## Challenges for Me \& The Project
+
+
+__Recruiting appropriate RS projects for Interventions Study may be difficult.__  
+
+ * High time commitment / engagement over several (~6-9) months;   
+ * Developers may be reluctant to open up about ineffective behaviours or poor quality coding   
+ * Potential difficulty in identifying RS projects from less familiar fields (e.g. Arts/Humanities/Social)   
+ * Important to use high-quality sampling method
+
+*Mitigations:* 
+Offer __participation reward__ vouchers; __share findings__ on improving development and RS quality;  (?programmatic?) __codebase measurement__/assessment methods to allow data collection without significant engagement by developers;  
+
+
+
+
+## Challenges for Me \& The Project  
+
+__Project timescales are short for measuring changes to codebase and development.__ 
+
+ * Risk of not beginning long forward study Interventions experiment soon enough  
+ * Delays to data collection  
+ * difficulty in arranging interviews/meetings with key developers 
+
+*Mitigations:* 
+Collate __list of potential projects__ which may be likely to meet participation criteria, add/subtract from this as I refine criteria and verify availability or interest.  
+__Stagger data collection__ to spread the load over time.  
+Focus on __sensitive metrics__ which are likely to result in measurable changes relatively quickly.  
+
+
+
+## My Questions:  
+
+* Is the __"pre-intervention period vs intervention period" study design__ worth the risks?  
+* How should I handle __studying more than one SEA recommendation__ in the intervention study? Split study into: [Control, Rec1, Rec2, Rec3]? [Control vs Rec1+2+3]?   
+* __Are 'control' groups more likely to drop out__ of intervention study?   
+* __How many projects are 'practical'__ to follow for ~1yr / account for drop-outs etc.?     
+* __How much compensation is 'typical'__ for taking part in a project like 'Interventions' study? What should I consider?  
